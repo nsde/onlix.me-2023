@@ -1,4 +1,4 @@
-#!/bin/bash
+# Runs the website (Linux)
 
 if [ $(hostname) = "onlixme" ]; then # official host
     PYTHON_BIN="/stuff/./pypy3.9-v7.3.9-linux64/bin/pypy"

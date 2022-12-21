@@ -88,7 +88,7 @@ You might also want to check out the [Python strftime cheatsheet](https://strfti
     print(current_time)
     
 ### Example Output
-    25/09/2022 10:12:51
+    21/12/2022 19:50:59
 
 ## Unix Timestamp `int` to `datetime`
 The following code won't format the code - for that, see the section above.
