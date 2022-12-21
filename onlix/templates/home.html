@@ -1,0 +1,72 @@
+{% with
+    title="Home",
+    description="Hello there! I'm Felix, a tech savvy student living in Germany. Welcome to my website!",
+    image="waves.jpg"
+%}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<h2>Welcome!</h2>
+
+<details>
+    <summary>About me</summary>
+    <p>
+        A list of programming languages I use, projects I contributed to, and more infos about me <a href="/skills">can be found here</a>.
+    </p>
+</details>
+
+<details>
+    <summary>About my website</summary>
+    <p>
+        I own a VPS since October of 2021 which hosts almost all of my projects.
+        <br><br>
+        I started re-programming my whole blog in February of 2022. The website is still under active development and
+        I'm constantly testing new features to further improve the user experience.
+        Because of that, there might be some slight problems here and there, so please
+        <a href="https://github.com/nsde/onlix.me/issues/new">report issues</a> on my GitHub! Thanks.
+        <br><br>
+        This website currently only contains a blog, in which I give advice on software, programming and more.
+        Did you know? I built this whole website's front-end more or less from scratch. No stolen templates, no website builder,
+        no third party CSS framework. Why? Well, firstly, to prove that I can and secondly, to learn how to maintain a website.
+    </p>
+</details>
+
+<details>
+    <summary>Where can I find your full name/phone number? (Personal/Private Information)</summary>
+    <p>
+        Because I care about privacy, I don't publish my entire CV and personal data, including name, photo or phone number.
+        If you want to get it touch with me though, there are a lot of options how you can do so listed in my
+        <a href="/contact">contact page</a>.
+        <br>
+        Also, this won't change (much) when I become an adult. I'll still care about privacy,
+        at least that's what I hope as of right now.
+    </p>
+</details>
+
+<details>
+    <summary>How/when did you learn programming?</summary>
+    <p>
+        I know there are many folks out there claiming Scratch isn't a programming language
+        (even though <a href="https://en.wikipedia.org/wiki/Scratch_(programming_language)">it is</a>),
+        but I started creating <a href="https://scratch.mit.edu/users/ikuch/">my own little games</a> more than 7 years ago,
+        and that's also around the time I started making videos. Back then, we had an old laptop really slow so we decided to
+        run Linux Mint on it, so I guess I can proudly say:
+        <br><br>
+        <i>I grew up with Linux</i>. And, I didn't
+        even realize it that time, because back then all I was doing
+        <a href="https://youtu.be/XH0Ex_cQRO8">was filming tutorials on how to install Mozilla Firefox</a>.
+        Jokes aside, I spend a lot of my free time working on little games on Scratch.
+    </p>
+</details>
+
+<section class="highlight">
+    <i class="bi bi-newspaper"></i>
+    <h3>My blog</h3> 
+    <p>While it is mostly about tech, but I also like to share my thoughts and opinions about anything that crosses my mind.</p>
+    <a href="/blog"><button><i class="bi bi-newspaper"></i> Read my blog posts</button></a>
+</section>
+
+<br><hr>
+<p>Cover photo by <a href="https://unsplash.com/@fakurian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Milad Fakurian</a> on <a href="https://unsplash.com/@fakurian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+
+{% include "components/end.html" %}

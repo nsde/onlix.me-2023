@@ -1,0 +1,122 @@
+{% with title=title + " · Blog", description=description, no_header=true %}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<link rel="stylesheet" href="/styles/highlight-dark.css">
+<link rel="stylesheet" href="/styles/highlight-light.css" media="(prefers-color-scheme: light)">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<p class="blog-details">
+    ONLIX Blog » <span class="hover-effect"><a href="/blog/@{{ category }}">@{{ category }}</a></span>
+    (Last update: <span>{{ last_update }}</span>)
+</p>
+
+{{ content | safe }}
+
+{% if posts %}
+<hr>
+<h3>Similar posts</h3>
+<div class="posts zoom-effect">
+    {% for post in posts[:3] %}
+    <div class="post" onclick="window.location.href = '../{{ post.path }}'">
+        <div class="banner">
+            <img src="../{{ post.path }}/image">
+        </div>
+        <div class="content">
+            <h5>{{ post.last_update }}</h5>
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<hr>
+<h3>Comments</h2>
+
+<p>
+    By commenting on my blog, you automatically agree to <a href="/legal">the terms and conditions</a>.
+</p>
+
+<script src="https://giscus.app/client.js"
+    data-repo="nsde/onlix.me"
+    data-repo-id="R_kgDOHGABgg"
+    data-category="Blog Comments"
+    data-category-id="DIC_kwDOHGABgs4CPCAU"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
+<details>
+    <summary>How to write a comment</summary>
+    <p>
+        Sign in using the green <mark class="white bg-green"><i class="bi bi-github"></i> Sign in with GitHub</mark> button above to write a comment.
+        You need a GitHub account to access this feature.
+    </p>
+</details>
+
+<details>
+    <summary>How to edit your comment</summary>
+    <p>
+        <ol>
+            <li>
+                Click on the timestamp of your message, for example <mark class="grey bg-black">2 minutes ago</mark>.
+            </li>
+            <li>
+                You will be redirected to the GitHub discussion page.
+            </li>
+            <li>
+                Open the three dots menu <i class="bi bi-three-dots"></i> at the top right of your message (outlined in blue).                
+            </li>
+            <li>
+                Click <i>Edit</i>.
+            </li>
+            <li>
+                Change your comment and press <mark class="white bg-green">Update comment</mark>.
+            </li>
+        </ol>
+    </p>
+</details>
+
+<script>
+    // COPY BUTTON
+    const codeboxes = document.querySelectorAll('pre');
+    
+    // Add button
+    for (const codebox of codeboxes) {
+        codebox.innerHTML = '<i class="bi bi-clipboard copy-to-clipboard"></i>' + codebox.innerHTML;
+    }
+
+    // Add events
+    const clipboards = document.querySelectorAll('.copy-to-clipboard');
+    
+    for (const clipboard of clipboards) {
+        clipboard.onmousedown = function() {
+            var code = clipboard.parentElement.children[1].innerText;
+
+            navigator.clipboard.writeText(code).then(function() {
+                clipboard.className = 'bi bi-clipboard-check copied copy-to-clipboard';
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            })
+        };
+    }
+
+    // HIGHLIGHTJS
+    try {
+        hljs.highlightAll();
+       }
+    catch (e) {
+        console.log('HighlightJS Error')
+    }
+</script>
+
+{% include "components/end.html" %}

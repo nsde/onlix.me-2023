@@ -1,0 +1,248 @@
+:root {
+    --theme: "Default";
+
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+        "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+        "Helvetica Neue", sans-serif;
+    --mono-font: "Droid Sans Mono", "monospace", monospace;
+
+    /* Default (light) theme */
+    --bg: #fff;
+    --accent-bg: #c6a0d723;
+    --darker-bg: #ffffff6c;
+    --darker-bg: rgb(78, 78, 78);
+    --light-bg: #202020;
+    --text: #111111;
+    --text-light: #3e3a4f;
+    --border: #211e582f;
+    --accent: #7b30c7;
+    --accent-nav: #a53ad7d0;
+    --accent-light: #ac70e777;
+    --code: #5833ea;
+    --preformatted: #444;
+    --marked: #9f39e3ce;
+    --disabled: #efefef;
+    --text-long: linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(17, 17, 17, 0.397) 71%, rgba(17, 17, 17, 0) 100%);
+    --gradient-accent: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(235, 72, 227) 50%, rgba(235, 27, 224, 0.753) 100%);
+}
+
+/* ============== THEMES ============ */
+
+.midnight {
+    --theme: "🌙 Midnight";
+
+    --bg: #0c0c0c;
+    --accent-bg: #5c5c5c13;
+    --darker-bg: #00000018;
+    --text: #ffffff;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --accent: #7c70e7;
+    --accent-light: #7270e777;
+    --code: #6b62f0;
+    --preformatted: #ccc;
+    --marked: #978cffa1;
+    --disabled: #111;
+    --gradient-accent: linear-gradient(90deg, #6b62f0 0%, #7270e7 50%, #7c70e7 100%)
+}
+
+.amoled {
+    --theme: "🌑 AMOLED";
+
+    --bg: #000000;
+    --accent-bg: #5c5c5c13;
+    --darker-bg: #00000018;
+    --text: #ffffff;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --accent: #7c70e7;
+    --accent-light: #7270e777;
+    --code: #6b62f0;
+    --preformatted: #ccc;
+    --marked: #978cffa1;
+    --disabled: #111;
+    --gradient-accent: linear-gradient(90deg, #6b62f0 0%, #7270e7 50%, #7c70e7 100%)
+}
+
+.ocean {
+    --theme: "🌊 Ocean";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #2598f6;
+    --accent-light: #70c1e777;
+    --code: #0f86e7;
+    --preformatted: #444;
+    --marked: #85cdfdce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #2598f6 0%, #2598f6 50%, #85cdfdce 100%)
+}
+
+.fiery {
+    --theme: "🔥 Fiery";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #f62536;
+    --accent-light: #e7708e77;
+    --code: #e70f50;
+    --preformatted: #444;
+    --marked: #fd85adce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #f62536 0%, #e70f50 50%, #fd85adce 100%)
+}
+
+.fresh {
+    --theme: "🍏 Fresh";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #41c06c;
+    --accent-light: #70e7a277;
+    --code: #00c060;
+    --preformatted: #444;
+    --marked: #abfd85ce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #41c06c 0%, #00c060 50%, #70e7a277 100%)
+}
+
+.golden {
+    --theme: "👑 Golden";
+
+    --bg: #fff;
+    --accent-bg: #e2e2e2;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #353535;
+    --border: #00000000;
+    --accent: #c0ad41;
+    --accent-light: #e7e57077;
+    --code: #c0a300;
+    --preformatted: #444;
+    --marked: #fde185ce;
+    --disabled: #efefef;
+    --gradient-accent: linear-gradient(90deg, #c0ad41 0%, #c0a300 50%, #e7e57077 100%)
+}
+
+.day {
+    --bg: #fff;
+    --accent-bg: #f6f6f6;
+    --darker-bg: #b9b9b96c;
+    --text: #111111;
+    --text-light: #585858;
+    --border: #00000000;
+    --disabled: #efefef;
+}
+
+.amoled.day {
+    --text: #000;
+}
+    
+.night {
+    --bg: #181927;
+    --accent-bg: #c6b4ff13;
+    --darker-bg: #00000018;
+    --text: #dcdcdc;
+    --text-light: #ffffffd8;
+    --border: #ffffff00;
+    --preformatted: #ccc;
+    --disabled: #111;
+
+}
+
+/* —————————————————————————————————— */
+
+.light-invert {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+@media (prefers-color-scheme: light) {
+    body>header.text-shadow {
+        text-shadow: 0px 0px 250px #ffffff, 0px 0px 50px #ffffff, 0px 0px 50px #ffffff;
+    }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme: "Default";
+
+        --bg: #181927;
+        --accent-bg: #c6b4ff13;
+        --darker-bg: #00000018;
+        --text: #dcdcdc;
+        --text-light: #ffffffd8;
+        --border: hsla(0, 0%, 100%, 0.099);
+        --accent: #ee75de;
+        --accent-nav: #753eb86b;
+        --accent-light: #e770d777;
+        --code: #f062b5;
+        --preformatted: #ccc;
+        --marked: #ff8cf9a1;
+        --disabled: #111;
+        --text-long: linear-gradient(180deg, rgba(220,220,220,1) 0%, rgba(220, 220, 220, 0.666) 71%, rgba(220, 220, 220, 0) 100%);
+    }
+    
+    /* img,
+    video {
+        opacity: 0.9;
+    } */
+
+    body>header.text-shadow {
+        text-shadow: 0px 0px 20px #000000a6, 0px 0px 20px #000000c5, 0px 0px 50px #000000b6, 0px 0px 25px #000000c7, 0px 0px 50px #000000, 0px 0px 25px #000000;
+    }
+    
+    .dark-invert {
+        filter: invert(1) hue-rotate(180deg);
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 50px 50px 0 rgba(255, 255, 255, 0.308);
+    }
+    
+    .light-invert {
+        filter: none;
+        box-shadow: none;
+    }
+}
+
+.debug * {
+    outline: solid rgba(0, 128, 0, 0.5) 1px;
+}
+
+.debug div {
+    outline: solid rgba(255, 0, 0, 0.5) 1px;
+}
+
+.theme-display::after {
+    content: var(--theme);
+}
+    
+.theme-color {
+    background: var(--gradient-accent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.only {
+    display: none;
+}
+
+@media (prefers-color-scheme: light) {.only.light {display: inherit;}}
+@media (prefers-color-scheme: dark) {.only.dark {display: inherit;}}
+
+@media (orientation: landscape) {.only.horizontal {display: inherit;}}
+@media (orientation: portrait) {.only.vertical {display: inherit;}}
+
+/* @media (scripting: initial-only) {.only.js-init {display: inherit;}}
+@media (scripting: enabled) {.only.js-on {display: inherit;}}
+@media (scripting: none) {.only.js-off {display: inherit;}} */

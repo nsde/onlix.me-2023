@@ -1,0 +1,134 @@
+{% with title="Contact", description="Have any questions? Let me know!", image="desk.jpg" %} {% include "components/top.html" %} {% endwith %}
+<style>
+    .sichere-neulandpost::before {
+        content: "mail";
+    }
+</style>
+
+<div class="text-box article-info">
+    <p>Please keep in mind I'm <a target="_blank" href="https://youtu.be/smE4_jXsABs">human</a>, I can't and won't respond
+        immediately. And spamming won't increase the odds of me reading your message, either. I usually have all my devices on "do not disturb", which
+        means I only read messages if I actively look for them.
+    </p>
+</div>
+
+<h3>I want to send you...</h3>
+<details>
+    <summary>Messages in German</summary>
+    <p>
+        Natürlich lese ich auch gerne Nachrichten, die auf Deutsch geschrieben worden sind.
+        <br>
+        Allerdings dann bitte auch nur in privaten Kanälen (z.B. E-Mail) – bitte Deutsch auf Plattformen wie GitHub eher vermeiden. So kann jeder die Diskussion verstehen. Danke!
+    </p>
+</details>
+<details>
+    <summary>Bug reports/feedback/... for open source projects</summary>
+    <p>
+        Thank you! Please open the corresponding <a href="https://github.com/nsde?tab=repositories" target="_blank">GitHub</a> repository and open the <mark class="white bg-gray">Issues</mark> section. Then, click on <mark class="white bg-green">New issue</mark>.
+        <br>
+        For example, if you want to send me feedback, bug reports or anything else for Stray, you can do so at <a href="https://github.com/nsde/Stray/issues/new">https://github.com/nsde/Stray/issues/new</a>.
+        <br>
+        Same goes for <a href="https://github.com/nsde/helix/issues/new">HELIX</a>.
+    </p>
+</details>
+<details>
+    <summary>Important messages (E-Mail)</summary>
+    <p>
+        <h5 class="m-0">Allowed inquiries</h5>
+        <ul class="bullets in-green m-0 m-b-1 ">
+            <li>Questions about me, my software or anything else</li>
+            <li>Hire/collaboration requests</li>
+            <li>Notes on errors (fact-checking, corrections, ...)</li>
+            <li>References to forgotten text passages in websites</li>
+            <li>Sponsorship</li>
+            <li>
+                Questions about my
+                <a href="/bug-bounty">
+                    Bug Bounty
+                </a>
+                program
+            </li>
+            <li>...any other relevant messages</li>
+        </ul>
+
+        <h5 class="m-0">Rejected inquiries</h5>
+        <ul class="bullets in-red m-0">
+            <li>Bug reports, software/code feedback (take a look <a href="#github">here</a> instead!)</li>
+            <li>Social media un-banning/blocking or friend requests</li>
+            <li>Spam, advertisements, newsletters</li>
+        </ul>
+        
+        <a href="mailto:hello@onlix.me" style="
+            display:
+            none;
+        ">My business contact E-Mail: hello@onlix.me</a>
+
+        <br>
+        <span>By writing an email to the following address you hereby
+            agree that you understand what kind of inquiries I ignore and consider spam:
+        </span>
+        <a
+            href="mailto:MAPFXATSYMonlixDOTLDACTLD"
+            onclick = "this.href=this.href
+                .replace(/MAPFX/, '&#109;&#97;&#105;&#108;')
+                .replace(/ATSYM/,'&#64;')
+                .replace(/DOTLD/,'&#46;')
+                .replace(/ACTLD/,'&#109;&#101;')
+            "
+            class="sichere-neulandpost"
+        >&#64;&#111;&#110;&#108;&#105;&#120;<span style="position:relative; top: .2em;">·</span>&#109;&#101;
+        </a>
+    </p>
+</details>
+<details>
+    <summary>Messages containing sensitive and private information (my/your full name, etc.)</summary>
+    <p>
+        Please avoid sending me private information via channels such as E-Mail if the message is not
+        properly <a href="https://en.wikipedia.org/wiki/Email_encryption">encrypted</a>!
+        E-Mails are unencrypted by default. Matrix/Element messages are, though. You can send me a private message.
+    </p>
+</details>
+<details>
+    <summary>Memes/jokes/casual conversations (Matrix)</summary>
+    <p>
+        You can join my <a href="#matrix">Matrix</a> channel and post your message in the according channel.
+        <strong>Do not</strong> send any non-important message per E-Mail, please!
+    </p>
+</details>
+
+<h3>Social Media</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Platform</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="matrix">
+                <a href="https://matrix.to/#/@onlix:matrix.org">
+                    Matrix/"Element"
+                </a>
+            </td>
+            <td><strong>My chat room (inactive)</strong> - For talking about my projects and anything like that. Doesn't have to be serious discussions.</td>
+    </tr>
+        <tr>
+            <td id="github">
+                <a href="https://github.com/nsde">
+                    GitHub¹
+                </a></td>
+            <td><strong>For software issues</strong> - Please use the "issues" tab of the appropriate repository to report bugs and suggest improvements to be made.</td>
+        </tr>
+        <tr>
+            <td>
+                <a href>
+                    [insert any (other) mainstream social media platform here]
+                </a>
+            </td>
+            <td><strong>Do you use Instagram/Facebook/Twitter/etc?</strong> Sorry, I do not use any other social media platforms except the ones above, at least publicly.</td>
+        </tr>
+    </tbody>
+</table>
+
+{% include "components/end.html" %}

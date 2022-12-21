@@ -1,0 +1,309 @@
+@font-face 
+    font-family: Whitney
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff)
+    font-weight: 400
+
+@font-face 
+    font-family: Whitney
+    src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff)
+    font-weight: 700
+
+
+.cord    
+    --theme: "🧵 Cord"
+    --sans-font: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+    --bg: #36393f
+    --accent-bg: #202225
+    --darker-bg: #2f3136
+    --light-bg: #42464d
+    --text: #ffffff
+    --text-light: #96989d
+    --border: #222427
+    --accent: #5865f2
+    --accent-light: #3ba55d
+    --code: #6b62f0
+    --link: #01aff5
+    --preformatted: #b9bbbe
+    --marked: #404675
+    --reaction: #3a415b
+    --reaction-border: #5965f2
+    --disabled: #d83c3e
+
+    --gradient-accent: linear-gradient(90deg, #6b62f0 0%, #7270e7 50%, #7c70e7 100%)
+
+    position: fixed
+    z-index: 1
+    top: 0
+    left: 5rem
+    overflow-x: hidden
+
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 5px
+
+    background-color: var(--darker-bg)
+    font-size: larger
+
+    padding: 0
+
+    display: block
+    cursor: pointer
+    border-radius: 5px
+    position: relative
+    top: 2rem
+
+    .guild-bar 
+        height: 100%
+        width: 5rem
+
+        position: fixed
+        z-index: 1
+        top: 0
+        left: 0
+        overflow-x: hidden
+
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 5px
+
+        background-color: var(--bg)
+        font-size: larger
+
+        padding: 0
+
+    .branding 
+        transition: 0.2s
+        cursor: pointer
+        padding: .5rem
+        text-align: center
+
+        img 
+            border-radius: 50%
+            filter: saturate(0%)
+            width: 50px
+
+            &:hover 
+                filter: saturate(100%)
+
+    .guild 
+        padding-left: .5rem
+        padding-right: .5rem
+        cursor: pointer
+
+        img 
+            width: 4rem
+            height: 4rem
+            border-radius: 50%
+
+        &.current 
+            border-image: linear-gradient(transparent 20%, rgb(255, 255, 255) 20% 80%, transparent 20%) 0 0 0 1 / 1px
+
+            img 
+                border-radius: 30%
+
+        &:hover:not(.current) 
+            border-image: linear-gradient(transparent 40%, rgb(255, 255, 255) 30% 50%, transparent 40%) 0 0 0 1 / 1px
+
+    .channel-bar 
+        height: 100%
+        width: 15rem
+
+        .channels 
+            margin-top: 1rem
+            padding: 1rem
+
+    .guild-header 
+        width: 100%
+        padding: 0.5rem
+        border-bottom: 1px solid var(--border)
+        cursor: pointer
+        transition: .2s
+        position: fixed
+
+        span 
+            margin: 1rem
+            font-weight: bold
+
+        &:hover 
+            background-color: var(--light-bg)
+
+    .channel 
+        transition: .2s
+    
+        span 
+            color: var(--text-light)
+            margin-top: 5px
+            margin-bottom: 5px
+            text-transform: lowercase
+
+        i 
+            padding-left: 3px
+            padding-right: 3px
+
+        &.current 
+            background-color: var(--light-bg)
+
+        &.unread span 
+            color: var(--text)
+            border-image: linear-gradient(transparent 40%, rgb(255, 255, 255) 30% 50%, transparent 40%) 0 0 0 1 / 2px
+
+        &:hover 
+            background-color: var(--darker-bg)
+            filter: brightness(120%)
+
+    .channel-top 
+        width: 100%
+
+        position: fixed
+        z-index: 1
+        top: 0
+        overflow-x: hidden
+
+        background-color: var(--bg)
+        border-bottom: 1px solid var(--border)
+        padding: 0.5rem
+        
+        cursor: default
+
+        span 
+            font-weight: bold
+            font-size: large
+            text-transform: lowercase
+
+            i 
+                font-size: xx-large
+                color: var(--text-light)
+                vertical-align: middle
+
+    .channel-box 
+        padding-left: 20rem
+
+    .messages 
+        padding: 1.5rem
+
+        br 
+            padding: 0
+            margin: 0
+
+        .message 
+            width: 95%
+            margin-bottom: -2rem
+
+            position: relative
+            top: 3rem
+
+            .avatar 
+                border-radius: 50%
+                height: 3rem
+                vertical-align: baseline
+
+                &:hover, .author:hover
+                    cursor: pointer
+                    text-decoration: underline
+
+            .time 
+                opacity: 0.5
+                font-size: smaller
+
+                &:hover
+                    cursor: default
+
+            .box 
+                padding-left: 4rem
+                position: relative
+                top: -3rem
+
+            .text 
+                opacity: 0.8
+
+            .content
+                *:not(a, u, strong, b, i, em, span, code) 
+                    display: block
+
+                img 
+                    max-height: 25%
+                    max-width: 30%
+                    border-radius: 1%
+
+                .tenor-gif-embed 
+                    max-height: 25%
+                    max-width: 30%
+
+            .reaction 
+                display: inline-block
+                padding: .2rem
+                padding-left: .5rem
+                padding-right: .5rem
+
+                width: fit-content
+                background-color: var(--reaction)
+                border-radius: 20%
+                border: 1px solid var(--reaction-border)
+                cursor: pointer
+
+            .youtube 
+                padding: 1rem
+                padding-top: 0.5rem
+                background-color: var(--darker-bg)
+                border-left: 4px solid red
+                width: fit-content
+                border-radius: 1%
+
+                iframe 
+                    border-radius: 1%
+
+                span 
+                    display: block
+                    font-size: small
+                    color: var(--text-light)
+
+            input 
+                width: 25%
+                padding: 0.5rem
+                background-color: var(--darker-bg)
+                color: var(--text)
+                transition: .2s
+
+    a 
+        color: var(--link)
+
+        &:hover 
+            text-decoration: underline
+
+    code 
+        padding: 0.1rem
+        border-radius: 3px
+        background-color: var(--darker-bg)
+
+    .message button 
+        color: var(--text)
+
+.bg-discord
+    background-color: #5865f2
+
+/* ================ USER ================ */
+
+.user-popup 
+    margin: 1rem
+    position: relative
+    background-color: var(--accent-bg)
+    border-radius: 5px
+    padding: 2rem    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19)
+
+    h3 
+        margin-top: 0
+        text-align: center
+
+    form 
+        align-items: center
+
+.input[required]::after 
+    content: "*"
+
+i#toggle-password 
+    cursor: pointer
+    font-size: 1.6rem
+    right: 1rem
+    left: -5px

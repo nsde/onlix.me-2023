@@ -1,0 +1,243 @@
+{% with
+    title="Legal",
+    description="Terms of Service, Privacy Policy, License & more",
+    image="law.jpg"
+%}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<a href="/legal/raw">Click here for a <strong>raw version</strong> without style, useful for printing.</a>
+<br>
+<a href="/legal/raw/download">Click here to <strong>download</strong> the raw version.</a>
+<br>
+<a href="https://github.com/nsde/onlix.me/commits/master/onlix/templates/legal.html">Click here for an (incomplete) <strong>archive</strong> with the changes of this page.</a>
+
+<!-- START ONLIX LEGAL PAGE -->
+
+<ol style="list-style-type: lower-roman;">
+    <li>
+        <h2 id="tos">Terms of Service</h2>
+        <p><strong>Last update: </strong>{{ last_update }} CET</p>
+        <p><strong>Important: </strong> The enumeration (e.g. <code>i. 1</code>) can move at any time, so when citing, mentioning the date above can be really useful.</p>
+
+        <p>
+            Furthermore, you might come across labels such as <span class="ox-label">HATE</span>,
+            but what do they mean? Simply put, these are abbreviation or codes to make it simpler
+            to refer to specific paragraphs of the terms of service.
+        </p>
+
+        <hr>
+
+        <p>By visiting and using this website, you agree to everything listed on this page, including but not limited to the license and privacy policy.</p>
+        <ol>
+            <li>
+                <strong>The internet is dangerous.</strong> Clicking links is at your own risk.
+                The links are checked before posting of course, but the internet is dynamic and content can change.
+                This rule especially applies to user generated content on social platforms.
+            </li>
+            <li>
+                <strong>To err is human.</strong> All information is supplied without guarantee.
+                Errors and omissions excepted.</li>
+            <li>
+                <strong>Privacy:</strong> The website only collects necessary information about you - see below for more on that.
+                Obviously, the website <i>needs</i> to store <i>some</i> data about you, often times temporarily,
+                to make e.g.
+                login systems work. Your personal information is not sold to advertisement companies or anything similarly
+                unethical.
+            </li>
+        </ol>
+
+        <h3>User Generated Content ("Rules")</h3>
+        <p>When using any ONLIX services (usually having a domain ending with <i>.onlix.me</i> and linking to this page), you agree the following:</p>
+        <ol>
+            <h4>General</h4>
+            <li>
+                Content illegal under German law is strictly prohibited! No excuses. No exceptions.
+                <span class="ox-label">ILLEGAL</span>
+            </li>
+            <li>Instigating others to breach laws is also prohibited! <span class="ox-label">PASSIVE_ILLEGAL</span></li>
+            <li>The terms of service, the license and anything else may change at any time without prior notice
+                and it's your responsibility to check the website regularly for these updates.
+            </li>
+            <li>
+                It is the obligation of users to report legal violations immediately.
+                This can either be done using the report button (if present) or using <a href="/contact">the contact page</a>.
+            </li>
+            <li>
+                The operator of the website can not be held liable for any legal violations caused by user the operator does
+                not know of as other users are obligated to report legal violations.
+            </li>
+            <li>
+                The website provider reserves the right to close the service or change it by
+                adding or deleting features at any time. The services may also be temporarily unavailable
+                at any time for technical or other reasons. 
+            </li>
+
+            <h4>In general, you are not allowed to post:</h4>
+            <ol>
+                <li>Copyrighted material or content whose license does not allow the user to distribute it. <span class="ox-label">COPYRIGHT</span></li>
+                <li>Content that violates human rights <span class="ox-label">UNETHICAL</span></li>
+                <li>User's private information, such as passwords and direct messages (it does not which which platform they were sent in) <span class="ox-label">LEAK</span></li>
+                <li>Hateful*, racist* and violent* content <span class="ox-label">HATE</span></li>
+                <li>NSFW content, such as pornographic media* and body fluids* <span class="ox-label">NSFW</span></li>
+                <li>Tutorials on how to deceive, steal, scam or otherwise damage other people. This can also include malicious, non-educational, non-ethical, illegal hacking <span class="ox-label">SCAM</span></li>
+                <li>Spam, affiliate-links and advertisements without the consent of the operator of the website <span class="ox-label">SPAM</span></li>
+            </ol>
+            
+            <h5>*Exceptions:</h5>
+            <p>
+                These exceptions can be ignored by the website operators at any time if they feel like
+                the content the user has posted is unsuitable nevertheless.
+                <br>
+                Additionally, illegal content is always forbidden, no matter the following exceptions.
+            </p>
+
+            <ol>
+                <li>Educational context and citation, for example news shows and similar.</li>
+                <li>
+                    An educational context does not persist if the user is submitting the content
+                    with the intention to advertise for themselves or their company, political party,
+                    association or similar. Or, simply put:
+                    <strong>no propaganda</strong>.
+                </li>
+            </ol>
+
+            <h4 id="bug-bounty">Bug Bounty</h4>
+            <ol>
+                <li>Feel free to scan and check our systems for any kind of security vulnerabilities and other
+                    types of exploits.
+                    You are kindly requested (but not forced) to <a href="/contact">notify</a> the website operator before doing so.
+                    <br>
+                    However, the following types of attacks are strictly prohibited without permission
+                    and not included in the bug bounty program:
+                    
+                    <ul>
+                        <li>DDoS attacks <span class="ox-label">DDOS</span></li>
+                        <li>Attacks that cause massive damage to users of the service
+                            (<strong>not</strong> <i>could cause</i>, but actively <i>do cause </i>).
+                            <span class="ox-label">BLACKHAT</span>
+                        </li>
+                    </ul>
+
+                    Any of these attack types can - in the worst case - get you a lawsuit.
+
+                </li>
+                <li>
+                    As long as you inform us about the found vulnerabilities, you basically do not need
+                    to fear legal trouble. Of course, it is strictly forbidden to sell or otherwise make
+                    the vulnerabilities or the user data obtained from them available to others. <span class="ox-label">SELL_DATA</span>
+                </li>
+                <li>
+                    Depending on the severity of the vulnerability, you can - if I believe you followed the rules - expect payment.
+                    <br>
+                    Feel free to <a href="/contact">contact us</a> for more information!
+                </li>
+            </ol>
+        </li>
+    </ol>
+    
+        <h3>User Generated Content</h3>
+        <p></p>
+    </li>
+
+    <li>
+        <h2 id="license">License</h2>
+        <ol>
+            <li>
+                This website is generally licensed under the <a href="https://mit-license.org/" target="_blank">MIT</a> License.
+                You are allowed to <i>borrow</i> content from this website, unless otherwise noted, until the operator
+                of this website changes the license (it is your responsibility to always check what the website's
+                license allows you!). 
+            </li>
+            <li>
+                Please note that some assets, such as images and videos are not made by ONLIX,
+                but by the kind people at <i>Pixabay</i> or <i>Unsplash</i>) and can have different licenses.
+                <br>
+                You are possibly not allowed to use their assets without their consent.
+            </li>
+            <li>
+                <strong>Warning! You are not allowed to: </strong><br>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Mislead others by pretending you own or created content I actually created.</li>
+                    <li>Sell content I have created, e.g. in the form of merch.</li>
+                    <ul>
+                        <li>You can, however, sell logos/banners/etc. I have created when adding significant changes, for example, you can't just rename the "onlix" logo lettering to "on lix" or "onllix", but you <i>can</i> rename it to "onlost" and add a clown emoj next to my name.</li>
+                        <li>This particularly applies for satire. It has to be clear though that your work isn't created or affiliated with me or my projects.</li>
+                    </ul>
+                    <li>Use content I have created for illegal and unethical (human rights infringing) purposes.</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+
+    <li>
+        <h2 id="privacy">Privacy Policy</h2>
+        <h3>Overview</h3>
+        <p>The service sometimes <i>needs</i> to store data for technical reasons.
+            In this case, the operator of this website is doing their best to make it as private and secure as possible:
+            personal information is usually encrypted/hashed and stored securely.
+
+            The following exceptions describe <strong>what</strong> data is stored on <strong>which</strong> service.
+            
+            <details>
+                <summary>
+                    Sign in with XY
+                </summary>
+                <ul>
+                    <li>WHAT: Sharing of information to 3rd parties (such as Discord) with your knowledge for account systems</li>
+                    <li>REASON: To make "connect with Discord"-links work, we need to share the information which is needed to connect your account with Discord.</li>
+                    <li>PAGES: Various, usually those with "Login with Discord" buttons. Examples include NovaPort.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    Entered form data/logins (user generated content)
+                </summary>
+                <ul>
+                    <li>WHAT: Your login password is always hashed securely, in the example of
+                        <a href="https://helix.onlix.me" target="_blank">HELIX</a> with the
+                        <a href="https://en.wikipedia.org/wiki/SHA-2#Comparison_of_SHA_functions" target="_blank">SHA-512 algorithm</a>.
+                        This is even more secure than encryption, because the operator of this website will never know your login password,
+                        even if the source code would be changed, only the new passwords will be visible in plain text for anyone.
+                        <br>
+                        Your email address and username however has to be saved in plain text for technical reasons (how is the system supposed to display your username if it's hashed?).
+                    </li>
+                    <li>REASON: For the website to function properly</li>
+                    <li>PAGES: Various, usually those with forms/input fields. Examples include NovaPort.</li>
+                    <img src="/images/novaport-legal.png">
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    <a href="https://www.ionos.com/digitalguide/hosting/technical-matters/what-are-session-cookies/" target="_blank">
+                        Session Cookies
+                    </a>
+                </summary>
+                <ul>
+                    <li>REASON: To keep the user logged in.</li>
+                    <img src="/images/session.png">
+                </ul>
+            </details>
+        </p>
+
+        <p>The operator of this website simply - if not otherwise noted above - does not track or store anything sensitive about their users.
+            You are welcome to take a look at <a href="https://github.com/nsde/web" target="_blank">this website's source code</a>.
+            <br>
+            Other projects, such as <a href="https://github.com/nsde/helix" target="_blank">HELIX</a> are open source as well!
+        </p>
+    </li>
+
+    <li>
+        <h2>Other/Disclaimers</h2>
+
+        <h3>Contact</h3>
+        <p>If you have additional questions or require more information about privacy, terms of service or similar, do not hesitate to <a href="/contact">contact us</a>.</p>
+        
+        <h3>Children's Information</h2>
+        <p>The social platforms offered by "ONLIX" are designed to be suitable for everyone, but the operator of this website still encourages parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+    </li>
+
+</ol>
+<!-- END ONLIX LEGAL PAGE -->
+
+{% include "components/end.html" %}

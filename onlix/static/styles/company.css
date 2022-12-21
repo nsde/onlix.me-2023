@@ -1,0 +1,158 @@
+@charset "UTF-8";
+.company {
+  --theme: "💼 Company";
+  --sans-font: "Estafet", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bg: #ffffff;
+  --accent-bg: #202225;
+  --darker-bg: #2f3136;
+  --light-bg: #42464d;
+  --text: #000000;
+  --text-light: #96989d;
+  --border: #222427;
+  --accent: #313639;
+  --accent-light: #d5001c;
+  --code: #313639;
+  --link: #000000;
+  --preformatted: #313639;
+  --marked: #d5001c;
+  --disabled: #d5001c;
+}
+.company button {
+  border-radius: 0;
+  box-shadow: none;
+  transition: 0.3s;
+}
+.company.primary {
+  color: black;
+  background-color: white;
+}
+.company:hover {
+  color: white;
+  background-color: #d5001c;
+}
+.company.secondary {
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+.company.secondary:hover {
+  color: #d5001c;
+  border-color: #d5001c;
+}
+.company div.gallery {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: auto auto auto;
+  align-items: start;
+  margin-top: -10px;
+}
+.company div.gallery div.item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.company div.gallery div.item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 50vh;
+  transition: 0.2s all ease-in-out;
+  overflow: hidden;
+}
+.company div.gallery div.item .title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+.company div.gallery div.item .subtitle {
+  margin-top: -0.5rem;
+}
+.company div.gallery div.item .info {
+  position: absolute;
+  left: 10%;
+  top: 2.5%;
+  color: white;
+  text-shadow: 0 0 40px #000000;
+}
+.company div.gallery div.item .info * {
+  color: white;
+  text-shadow: 0 0 40px #000000;
+  line-height: 3rem;
+}
+.company div.gallery div.item .info .buttons {
+  position: absolute;
+  left: 10%;
+  top: 75%;
+}
+.company h2.title {
+  font-weight: 400;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-left: 12rem;
+  margin-bottom: 1.7rem;
+}
+.company .carousel-cell {
+  width: 100%;
+  height: 80vh;
+}
+.company .carousel-cell img {
+  outline: 1px solid red;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+.company nav {
+  height: 125px;
+}
+.company img.branding {
+  margin-left: 12rem;
+  height: 70px;
+  margin-top: 20px;
+  transition: 0.2s;
+  padding-bottom: 20px;
+}
+.company img.branding:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.company div.discover {
+  height: 280px;
+  margin-left: 12rem;
+}
+.company div.discover div.tile {
+  float: left;
+  width: 20vw;
+}
+.company div.discover div.tile img {
+  width: 100%;
+  height: 100%;
+}
+.company div.discover div.tile a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.company div.discover div.tile a:hover {
+  color: #d5001c;
+  cursor: pointer;
+  text-decoration: none;
+}
+.company div.discover div.tile a i.bi {
+  color: #d5001c;
+}
+.company .footer {
+  padding-top: 20px;
+  padding-left: 200px;
+  padding-bottom: 50px;
+  color: white;
+  background-color: #191f22;
+}
+.company .footer a {
+  color: white;
+  transition: 0.3s;
+}
+.company .footer a:hover {
+  color: #d5001c;
+  text-decoration: none;
+}/*# sourceMappingURL=company.css.map */

@@ -1,0 +1,38 @@
+{%
+    with title="Blog Overview",
+    description="View all blog posts " + text,
+    image="blogging.jpg"
+%}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<h3>All posts {{ text or '' }}</h3>
+
+{% if tags %}
+    <h4>All tags:</h4>
+    <div class="marks">
+    {% for tag in tags %}
+        <mark class="hover-effect" onclick="window.location.href = '/blog/+{{ tag }}'">{{ tag }}</mark> 
+    {% endfor %}
+    </div>
+{% endif %}
+
+<div class="posts zoom-effect">
+    {% for post in posts %}
+    <div class="post" onclick="window.location.href = '../{{ post.path }}'">
+        <div class="banner">
+            <img src="../{{ post.path }}/image">
+        </div>
+        <div class="content">
+            <!-- <h5>{{ post.last_update }}</h5> -->
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<h6>Dates are from the last update. See the <a href="https://github.com/nsde/onlix.me/tree/master/onlix/blog">GitHub repository</a> for details on when I changed which blog post.</h6>
+<p>Thanks to StockSnap on Pixabay for the <a href="https://pixabay.com/photos/wordpress-blogging-writing-typing-923188/">cover image</a>!</p>
+
+{% include "components/end.html" %}

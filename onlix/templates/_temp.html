@@ -1,0 +1,33 @@
+{% with
+    title="Syntax YouTube Downloader",
+    description="Lade hier den offiziellen Syntax YouTube Downloader herunter",
+    image=""
+%}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<img src="/images/syytdl.png">
+
+<h2>Download</h2>
+<p>Hier geht's zum Download:</p>
+<a href="/share/ytdownloader.exe">
+    <button>Download</button>
+</a>
+
+<h2>Fehlerbehebung</h2>
+<h3>"Der Computer wurde durch Windows geschützt"</h3>
+<p>Wahrscheinlich bekommst du folgende Fehlermeldung:</p>
+<img src="/images/winprot.png">
+<p>Dies liegt daran, dass die .exe nicht signiert ist. Und ich bin zu faul dafür. Deswegen:</p>
+<ol>
+    <li>Klicke "Weitere Informationen"</li>
+    und dann
+    <li>"Trotzdem ausführen"</li> Nun sollte die App starten.
+</ol>
+<p>Signieren heißt, dass Windows Bescheid weiß, dass es sich bei dem Download um die echte Datei handelt.
+    Dies ist hier allerdings nicht wirklich notwendig, da dies nur ein Test-Programm ist.</p>
+
+<h3>Wo werden die Downloads gespeichert?</h3>
+<p>Die Downloads werden im selben Ordner gespeichert, wo auch die <code>ytdownloader.exe</code> liegt - vermutlich also in <code>Downloads</code>.</p>
+
+{% include "components/end.html" %}

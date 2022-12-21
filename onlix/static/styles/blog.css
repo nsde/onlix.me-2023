@@ -1,0 +1,127 @@
+/* ================== CARDS ================== */
+div.cards {
+  display: flex;
+  align-items: center;
+}
+div.cards div.card {
+  filter: brightness(0.9) saturate(0.9);
+  transition: 0.5s;
+  margin: 0.5rem;
+}
+div.cards div.card a {
+  font-style: italic;
+}
+div.cards div.card img {
+  width: 90%;
+}
+div.cards:hover, div.cards header.a {
+  filter: brightness(1.1) saturate(1.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.hover-effect {
+  transition: 0.5s;
+}
+.hover-effect:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+div.text-box {
+  margin: 1rem;
+  background-color: var(--accent-bg);
+  border-radius: 5px;
+  padding: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+}
+div.text-box p {
+  margin: 0;
+}
+
+/* ================ POSTS ================ */
+div.posts {
+  display: grid;
+  box-sizing: border-box;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  align-items: start;
+}
+
+div.post, div.featured.post {
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background-color: var(--accent-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+div.post div.content, div.featured.post div.content {
+  padding: 2rem;
+  margin: 0.2rem;
+  padding-top: 0px;
+}
+div.post div.actions i.bi, div.featured.post div.actions i.bi {
+  font-size: 1.5rem;
+  padding-right: 0.2rem;
+}
+div.post div.actions i.bi:hover, div.featured.post div.actions i.bi:hover {
+  opacity: 0.7;
+}
+div.post div.banner, div.featured.post div.banner {
+  overflow: hidden;
+  height: 10rem;
+  background: black;
+  margin-bottom: 1rem;
+}
+div.post div.banner img, div.featured.post div.banner img {
+  height: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+  margin-bottom: 2rem;
+}
+div.post div.banner img.detail, div.featured.post div.banner img.detail {
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+div.post h4, div.featured.post h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+div.post h5, div.featured.post h5 {
+  margin: 0rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+  font-weight: normal;
+}
+div.post h6.detail, div.featured.post h6.detail {
+  margin: 0;
+  display: inline;
+}
+div.post:hover img, div.featured.post:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+div.featured.post {
+  height: auto;
+}
+
+div.featured.post:hover {
+  cursor: pointer;
+}
+
+i.bi.active {
+  color: var(--accent);
+}/*# sourceMappingURL=blog.css.map */

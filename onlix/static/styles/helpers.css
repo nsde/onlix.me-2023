@@ -1,0 +1,108 @@
+/* RGB EFFECTS */
+@keyframes rgb-effect {
+    from {filter: hue-rotate(0deg);}
+    to {filter: hue-rotate(360deg);}
+}
+
+.rgb-slowest {animation: rgb-effect 60s linear infinite;}
+.rgb-slower {animation: rgb-effect 20s linear infinite;}
+.rgb-slow {animation: rgb-effect 10s linear infinite;}
+.rgb-fast {animation: rgb-effect 5s linear infinite;}
+.rgb-faster {animation: rgb-effect 3s linear infinite;}
+.rgb-fastest {animation: rgb-effect 1s linear infinite;}
+
+.animate-on-hover {animation-play-state: paused;}
+.animate-on-hover:hover {animation-play-state: running;}
+
+/* SIMPLE CLASSES */
+/* Colors */
+
+.red {color: rgb(212, 16, 16);}
+.light-red {color: rgb(243, 67, 55);}
+.light-red a {color: inherit !important; text-decoration: underline; filter: brightness(2) saturate(2)}
+.orange {color: orange;}
+.yellow {color: yellow;}
+.green {color: rgb(22, 163, 22);}
+.blue {color: rgb(76, 76, 243);}
+.magenta {color: magenta;}
+.teal {color: teal;}
+.white {color: white;}
+.black {color: black;}
+.gray {color: gray;}
+
+.fg-transparent {color: rgba(0, 0, 0, 0)}
+
+.fg-bg {color: var(--bg);}
+.fg-accent-bg {color: var(--accent-bg);}
+.fg-darker-bg {color: var(--darker-bg);}
+.fg-light-bg {color: var(--light-bg)}
+.fg-text {color: var(--text)}
+.fg-text-light {color: var(--text-light)}
+.fg-border {color: var(--border)}
+.fg-accent {color: var(--accent)}
+.fg-accent-light {color: var(--accent-light)}
+.fg-code {color: var(--code)}
+.fg-link {color: var(--link)}
+.fg-preformatted {color: var(--preformatted)}
+.fg-marked {color: var(--marked)}
+.fg-disabled {color: var(--disabled)}
+
+.bg-red {background-color: red;}
+.bg-orange {background-color: orange;}
+.bg-yellow {background-color: yellow;}
+.bg-green {background-color: green;}
+.bg-blue {background-color: blue;}
+.bg-magenta {background-color: magenta;}
+.bg-teal {background-color: teal;}
+.bg-white {background-color: white;}
+.bg-black {background-color: black;}
+.bg-gray {background-color: gray;}
+
+.bg-bg {background-color: var(--bg);}
+.bg-accent-bg {background-color: var(--accent-bg);}
+.bg-darker-bg {background-color: var(--darker-bg);}
+.bg-light-bg {background-color: var(--light-bg)}
+.bg-text {background-color: var(--text)}
+.bg-text-light {background-color: var(--text-light)}
+.bg-border {background-color: var(--border)}
+.bg-accent {background-color: var(--accent)}
+.bg-accent-light {background-color: var(--accent-light)}
+.bg-code {background-color: var(--code)}
+.bg-link {background-color: var(--link)}
+.bg-preformatted {background-color: var(--preformatted)}
+.bg-marked {background-color: var(--marked)}
+.bg-disabled {background-color: var(--disabled)}
+
+.bg-transparent {background-color: rgba(0, 0, 0, 0)}
+
+/* Fonts */
+.bold {font-weight: bold;}
+.underline {text-decoration: underline;}
+.italic {font-style: italic;}
+.strikethrough {text-decoration: line-through;}
+
+/* Misc */
+.inline {display: inline;}
+.code {font-family: monospace;}
+.small {font-size: small;}
+.medium {font-size: medium;}
+.large {font-size: large;}
+
+.too-long {
+    background: var(--text-long);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.circle {border-radius: 50%;}
+.fully-transparent {opacity: 0;}
+.half-transparent {opacity: 0.5;}
+
+img.small {
+    width: 50%;
+}
+
+
+.m-0 {margin: 0;}
+
+.m-b-1 {margin-bottom: 1rem;}

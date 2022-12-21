@@ -1,0 +1,71 @@
+<!--=| Start of end.html |=-->
+{% if not lite %}
+    </main>
+
+    <footer>
+        <a href="/legal">Privacy · Terms of Service</a>
+        <br>
+        &copy;2022 ONLIX. Licensed under MIT.
+        <br>
+        All information is supplied without guarantee.
+        Errors and omissions excepted.
+        
+        <noscript>
+            <i class="bi bi-exclamation-octagon red"></i>
+            <p><strong>JavaScript is not enabled or working properly.</strong></p>
+            <p>This can break this website's functionality!</p>
+            <p><a href="https://enable-javascript.com/">How to enable JavaScript</a></p>
+        </noscript>
+    </footer>
+
+    </body>
+{% endif %}
+</html>
+
+<script>
+    // HIDE NAVBAR ON SCROLL
+    var prevScrollpos = window.pageYOffset;
+
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+    }
+
+    prevScrollpos = currentScrollPos;
+    }
+
+    // CLICKABLE IMAGES
+    document.querySelectorAll("img.clickable").forEach((item) => {
+        item.addEventListener("click", (event) => {
+            event.target.classList.toggle("toggle-big");
+            document.getElementsByTagName("body")[0].classList.toggle("blur-everything");
+        });
+    });
+
+    // Details/Summary Auto-Close
+    const details = document.querySelectorAll("details");
+
+    // Add the onclick listeners.
+    details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+            if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+            }
+            });
+        });
+    });
+
+    // FOSS symbols
+    const fosses = document.getElementsByTagName("foss");
+
+    for (const foss of fosses) {
+        foss.innerHTML = '<mark class="small"><abbr title="Free and open-source software"><a style="color: white;" target="_blank" href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a></abbr></mark>';
+    } 
+</script>
+
+<!--=| End of end.html |=-->

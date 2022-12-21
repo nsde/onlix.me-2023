@@ -1,0 +1,43 @@
+{% with
+    title="Randomizer",
+    description="Random website generator",
+    image="waves.jpg"
+%}
+    {% include "components/top.html" %}
+{% endwith %}
+
+<h2>Random website generator</h2>
+
+<div class="text-box">
+    <strong>!</strong>
+    Use at your own risk.
+    Any website can open.
+    We do not encourage to use these in any way.
+
+    <a
+        href
+        id="magicButton"
+        onclick="magic();"
+    >
+        <button>
+            I agree, open a completely random website!
+        </button>
+    </a>
+</div>
+
+<script>
+    button = document.querySelector('#magicButton');
+    
+    function magic() {
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.open("GET", "/api/random/website", false );
+        xmlHttp.send(null);
+    
+        randomWebsite = xmlHttp.responseText;
+
+        window.open(randomWebsite, '_blank');
+    }
+</script>
+
+{% include "components/end.html" %}
