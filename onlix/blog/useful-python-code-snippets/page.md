@@ -68,7 +68,7 @@ Here's an example of how you can implement this functionality for your Flask ser
     def log_download():
         text = 'Hello, world!'
 
-        return flask.send_file(io.BytesIO(text.encode('utf-8')), mimetype='text/html', attachment_filename='example.log' ,as_attachment=True)
+        return flask.send_file(io.BytesIO(text.encode('utf-8')), mimetype='text/html', download_name='example.log', as_attachment=True)
 
     ...
 

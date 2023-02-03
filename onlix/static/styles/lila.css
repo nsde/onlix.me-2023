@@ -8,9 +8,11 @@
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 
 html {
-  font-family: var(--sans-font);
   scroll-behavior: smooth;
 }
 
@@ -33,44 +35,41 @@ body:not(.no-grid) > * {
 }
 
 /* ================ HEADER ================ */
-body.dark nav,
-body.dark header,
-body.dark nav {
+body.dark nav, body.dark header {
   color: white;
 }
 
 /* Make the header bg full width, but the content inline with body */
-body > header {
+header {
   text-align: center;
   position: relative;
-  box-sizing: border-box;
   /* box-shadow: 0 4px 50px rgba(80, 70, 70, 0.1), 0 100px 50px rgba(0, 0, 0, 0.1) */
   align-items: center;
   justify-content: center;
   z-index: 40;
 }
-body > header > img {
+header > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 300px;
 }
-body > header.tall {
+header.tall {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-body > header.with-nav {
+header.with-nav {
   padding-top: 4.5rem;
 }
-body > header:not(.no-grid) {
+header:not(.no-grid) {
   grid-column: 1/-1;
 }
-body > header h1 {
+header h1 {
   max-width: 1200px;
   margin: 1rem auto;
 }
-body > header p {
+header p {
   max-width: 40rem;
   margin: 1rem auto;
 }
@@ -179,7 +178,7 @@ nav {
 nav.floating {
   position: fixed;
   background-color: var(--accent-nav);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.69);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.344);
 }
 nav.floating * {
   color: white !important;
@@ -193,28 +192,6 @@ nav.floating * {
 }
 nav.stay-left {
   position: fixed;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content a {
-  float: left;
-  display: none;
-}
-
-.dropdown:hover, .dropdown-content {
-  display: block;
 }
 
 nav .logo {
@@ -317,7 +294,6 @@ body > footer {
   color: var(--text-light);
   font-size: 0.9rem;
   text-align: center;
-  border-top: 1px solid var(--text-light);
   opacity: 0.8;
 }
 
@@ -333,85 +309,6 @@ body > footer {
 div.row {
   display: flex;
   width: 100%;
-}
-
-div.input-box {
-  display: inline;
-}
-
-div.input-box input {
-  width: 80%;
-}
-
-@media (min-width: 580px) {
-  div.input-box input {
-    width: 70%;
-  }
-}
-.progress {
-  margin: 1rem auto;
-  max-width: 500px;
-  background-color: var(--accent-bg);
-  border-radius: 5px;
-}
-
-@-webkit-keyframes bar-fill {
-  from {
-    width: 0%;
-  }
-  to {
-    width: var(--percentage);
-  }
-}
-
-@keyframes bar-fill {
-  from {
-    width: 0%;
-  }
-  to {
-    width: var(--percentage);
-  }
-}
-.progress .bar {
-  height: 100%;
-  width: var(--percentage);
-  --percentage: 70%;
-  -webkit-animation: bar-fill 1s;
-          animation: bar-fill 1s;
-  background: var(--gradient-accent);
-  border-radius: 5px;
-}
-
-.progress p {
-  color: white;
-  padding-left: 0.5rem;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.829);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.6rem;
-  margin-top: 3rem;
-}
-
-h3 {
-  font-size: 2rem;
-  margin-top: 3rem;
-}
-
-h4 {
-  font-size: 1.44rem;
-}
-
-h5 {
-  font-size: 1.15rem;
-}
-
-h6 {
-  font-size: 0.96rem;
 }
 
 /* Fix line height when title wraps */
@@ -437,31 +334,6 @@ h3 {
   }
 }
 /* ================== UTILITY/TOOLTIP ================== */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 2px dotted var(--text-light);
-}
-
-.tooltip .tip {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.479);
-  color: #fff;
-  width: 150px;
-  font-size: 1rem;
-  font-weight: normal;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  transition: 0.3s;
-}
-
-.tooltip:hover .tip {
-  opacity: 1;
-}
-
 /* Format links & buttons */
 main a, footer a,
 main a:visited, footer a:visited {
@@ -502,21 +374,12 @@ input[type=button] {
   transition: 0.3s;
 }
 
-button[disabled],
-[role=button][aria-disabled=true],
-input[type=submit][disabled],
-input[type=reset][disabled],
-input[type=button][disabled],
-input[type=checkbox][disabled],
-input[type=radio][disabled],
-select[disabled] {
+button[disabled], [role=button][aria-disabled=true], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=checkbox][disabled], input[type=radio][disabled], select[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-input:disabled,
-textarea:disabled,
-select:disabled {
+input:disabled, textarea:disabled, select:disabled {
   cursor: not-allowed;
   background-color: var(--disabled);
 }
@@ -529,29 +392,11 @@ abbr {
   cursor: help;
 }
 
-button:focus,
-button:enabled,
-[role=button],
-[role=button]:not([aria-disabled=true]),
-input[type=submit],
-input[type=submit]:enabled,
-input[type=reset],
-input[type=reset]:enabled,
-input[type=button],
-input[type=button]:enabled {
+button:focus, button:enabled, [role=button], [role=button]:not([aria-disabled=true]), input[type=submit], input[type=submit]:enabled, input[type=reset], input[type=reset]:enabled, input[type=button], input[type=button]:enabled {
   transition: 0.3s;
 }
 
-button:focus,
-button:enabled:hover,
-[role=button]:focus,
-[role=button]:not([aria-disabled=true]):hover,
-input[type=submit]:focus,
-input[type=submit]:enabled:hover,
-input[type=reset]:focus,
-input[type=reset]:enabled:hover,
-input[type=button]:focus,
-input[type=button]:enabled:hover {
+button:focus, button:enabled:hover, [role=button]:focus, [role=button]:not([aria-disabled=true]):hover, input[type=submit]:focus, input[type=submit]:enabled:hover, input[type=reset]:focus, input[type=reset]:enabled:hover, input[type=button]:focus, input[type=button]:enabled:hover {
   filter: brightness(1.2);
   cursor: pointer;
 }
@@ -629,8 +474,6 @@ input {
   border: none;
   border-radius: 5px;
   box-shadow: none;
-  box-sizing: border-box;
-  /* width: 60% */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -779,23 +622,11 @@ blockquote p, blockquote cite {
   margin-bottom: 0.5rem;
 }
 
-/* Use mono font for code elements */
-code,
-pre,
-pre span,
-kbd,
-samp,
-p code,
-pre code,
-pre font b {
+code, pre *, kbd, samp {
   font-family: var(--mono-font);
   color: var(--text);
   line-height: 19px;
   letter-spacing: 0px;
-}
-
-pre font b {
-  color: #26A269;
 }
 
 kbd {
@@ -891,26 +722,7 @@ button.to-top {
   float: right;
 }
 
-button.to-top.icon {
-  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
-          clip-path: polygon(50% 0, 0 100%, 100% 100%);
-}
-
 /* Tools */
-.blur-everything *:not(.toggle-big):not(.toggle-big *) {
-  filter: blur(5px) brightness(0.8);
-}
-
-.clickable.toggle-big::before {
-  content: "X";
-}
-
-.clickable.toggle-big {
-  float: left;
-  position: relative;
-  width: 100vh;
-}
-
 @media (min-width: 1600px) {
   .toc {
     position: fixed;
@@ -922,9 +734,4 @@ button.to-top.icon {
 }
 .blog-details {
   opacity: 0.7;
-}
-
-/* Main stuff */
-*:focus {
-  outline: none;
 }/*# sourceMappingURL=lila.css.map */

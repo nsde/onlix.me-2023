@@ -43,7 +43,7 @@ def legal_raw():
 @main_bp.route('/legal/raw/download')
 def legal_raw_download():
     """Downloads the raw legal page"""
-    return flask.send_file(BytesIO(legal_page_raw().encode('utf-8')), mimetype='text/html', attachment_filename='onlix_legal_raw.html' ,as_attachment=True)
+    return flask.send_file(BytesIO(legal_page_raw().encode('utf-8')), mimetype='text/html', download_name='onlix_legal_raw.html', as_attachment=True)
 
 @main_bp.route('/donate')
 def donate():
