@@ -14,20 +14,11 @@ api_bp = flask.Blueprint('api_bp',
 def server_ip():
     return '173.212.213.133'
 
-@api_bp.route('/lila.css')
-# @cache.cached(timeout=50)
-def lila_css():
-    with open('static/styles/lila.css') as f:
-        css_data = f.read()
-    response = flask.make_response(css_data, 200)
-    response.mimetype = "text/css"
-    return response
-
-@api_bp.route('/api/post')
+@api_bp.route('/api/v1/post')
 def api_text():
     return markupsafe.escape(flask.request.args.get('text'))
 
-@api_bp.route('/api/qr/<path:subpath>')
+@api_bp.route('/api/v1/qr/<path:subpath>')
 def api_qr(subpath):
     qr = tools.generate_qr
     subpath = subpath.replace(':/', '://')
@@ -44,18 +35,18 @@ def api_qr(subpath):
     except ValueError as e:
         flask.abort(400, str(e))
 
-@api_bp.route('/api/blog')
+@api_bp.route('/api/v1/blog')
 def api_blog():
     return flask.jsonify(blog.get_posts(with_code=False))
 
-@api_bp.route('/api/blog/<post>')
+@api_bp.route('/api/v1/blog/<post>')
 def api_blog_post(post):
     try:
         return blog.get_info(post)
     except FileNotFoundError:
         return flask.abort(404)
 
-@api_bp.route('/api/login-demo', methods=['POST'])
+@api_bp.route('/api/v1/login-demo', methods=['POST'])
 def login_demo():
     return {
         'form': flask.request.form,
@@ -63,7 +54,7 @@ def login_demo():
         'json': flask.request.get_json()
     }
 
-@api_bp.route('/api/random/website')
+@api_bp.route('/api/v1/random/website')
 def random_website():
     with open('static/cdn/top_250000_domains.txt', 'r') as f:
         sites = f.readlines()

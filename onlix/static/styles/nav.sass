@@ -1,0 +1,95 @@
+@import '_vars'
+
+nav
+    z-index: 1337
+    line-height: 2
+    overflow: hidden
+    top: 0
+
+    width: 100%
+    font-size: 1rem
+
+@media (max-width: 720px)
+    nav
+        .logo, span, i
+            display: none
+
+nav.floating
+    *
+        color: var(--text) !important
+
+    // position: fixed
+    background: var(--glass)
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.344)
+
+@media (prefers-color-scheme: light)
+    nav.floating
+        box-shadow: 0 0 10px rgba(227, 227, 227, 0.775)
+
+nav.stay-left
+    position: fixed
+
+nav .logo
+    float: left
+    height: 40px
+    transition: 1s
+    margin-top: 0.5rem
+    margin-left: 1rem
+
+    &:hover
+        cursor: pointer
+        transform: rotate(360deg)
+
+nav span
+    font-size: 1.5rem
+    margin-left: 0.3rem
+    margin-top: 4px
+    float: left
+
+    font-weight: 300
+
+@keyframes navimation
+    from
+        border-top-color: transparent
+        color: inherit
+
+    to
+        border-top-color: var(--text)
+        color: var(--accent)
+
+nav a
+    margin: 0 1rem .5rem 0
+    padding: 0.5rem 1rem
+    display: inline-block
+
+    text-decoration: none
+
+    i.bi
+        display: none
+
+    &.current
+        color: var(--accent)
+        border-top: var(--text) solid
+    
+        animation: navimation .5s ease-out
+
+    &.colored
+        border-color: var(--accent)
+
+    &:hover
+        color: var(--accent)
+        position: relative
+
+    &.right
+        color: var(--accent)
+
+@media (min-width: 500px)
+    nav a.right
+        float: right
+
+nav a:last-child
+    margin-right: 0
+
+@media (max-width: 500px)
+    nav a
+        margin: 0

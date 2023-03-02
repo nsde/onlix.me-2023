@@ -1,0 +1,42 @@
+:root {
+  --edge: 5px;
+  --theme: "Light";
+  --sans-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --mono-font: "Droid Sans Mono", "monospace", monospace;
+  --bg: #faf8fb;
+  --accent-bg: #c6a0d723;
+  --darker-bg: #645a82;
+  --fluid: #b2a0ed45;
+  --light-bg: #202020;
+  --text: #111111;
+  --text-light: #3e3a4f;
+  --border: #211e582f;
+  --accent: #7b41f9;
+  --glass: #afaad0ee;
+  --soft: #6d68f622;
+  --active: #9c7aec;
+  --code: #444;
+  --marked: #9f39e32d;
+  --disabled: #efefef;
+  --gradient-accent: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(235, 72, 227) 50%, rgba(235, 27, 145, 0.753) 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme: "Dark";
+    --bg: #12101d;
+    --accent-bg: #c6b4ff13;
+    --darker-bg: #00000018;
+    --fluid: #7c5da543;
+    --text: #dcdcdc;
+    --text-light: #ffffffd8;
+    --border: hsla(0, 0%, 100%, 0.099);
+    --accent: #de79fa;
+    --glass: #704b98d6;
+    --soft: #f668d00f;
+    --active: #7b2c66;
+    --code: #ccc;
+    --marked: #ff8cf9a1;
+    --disabled: #111;
+  }
+}/*# sourceMappingURL=ui.css.map */

@@ -1,0 +1,66 @@
+@import '_vars'
+
+ul.bullets
+    list-style: none
+
+    li
+        line-height: 2rem
+
+    li::before
+        content: "•"
+        display: inline-block
+        width: .7em
+        margin-left: -1em
+        font-size: xx-large
+
+        position: relative
+        top: 5px
+
+ul.bullets.in-red li::before
+    color: #fb2828
+
+ul.bullets.in-green li::before
+    color: #00ff0d
+
+.copy-to-clipboard
+    display: block
+    transition: 0.3s
+
+    font-size: large
+    font-style: normal
+
+    margin-bottom: 5px
+
+    opacity: 0.4
+    
+    &:hover
+        cursor: pointer
+        width: auto
+        opacity: .6
+
+    &:active
+        color: #00ff0d
+        opacity: 1
+    
+    &.copied
+        color: #00ff0d
+
+        &::after
+            content: " Copied to clipboard"
+
+    &::after
+        content: " Copy to clipboard"
+
+span.ox-label
+    color: orange
+    opacity: 0.4
+    text-decoration: underline
+
+    &::before
+        content: "[OX-"
+    
+    &::after
+        content: "]"
+
+div.marks mark
+    line-height: 2

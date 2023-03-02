@@ -6,62 +6,18 @@
     {% include "components/top.html" %}
 {% endwith %}
 
-{% if error %}
-<div class="text-box">
-    <p>
-        ❌ <strong>Invalid donation token, please try again!</strong>
-        <br>
-        Donation tokens expire after 24 hours. Simply reload this page to refresh your token.
-    </p>
-</div>
-{% endif %}
-
 <h2>Donate</h2>
 
 <iframe src="https://invidious.nerdvpn.de/embed/Nbe_rtee1wI" height="225"></iframe>
 
 <h3>Important - read this before donating!</h3>
 <div class="text-box">
-    <ol>
-        <li>I do not rely on donations to live. I have the privilege to reside in a rich country, to have a well paid job as well as to have no financial difficulties whatsoever.</li>
-        <li>Do NOT - in any circumstances - donate if:</li>
-        <ul>
-            <li>You feel like you are being forced to donate to be polite</li>
-            <li>You are below the age of 18</li>
-            <li>You have not earned the money yourself</li>
-            <li>Your country does not allow you to donate to me</li>
-            <li>My country (Germany) does not allow me to accept your donations</li>
-            <li>You have not read the text above</li>
-        </ul>
-    </ol>
+    <p>I do not rely on donations to live. I have the privilege to reside in a rich country, to have a well paid job as well as to have no financial difficulties whatsoever.</p>
 </div>
 
-<h3>I want to donate money because...</h3>
-<details>
-    <summary>....I can</summary>
-    <p>
-        <a href="/donate?token={{ token }}">Great answer! Thanks a lot!</a>
-    </p>
-</details>
-<details>
-    <summary>...I have some money/<i>Bitcoin</i>/<i>Monero</i>/<i>Steam</i> cards left over</summary>
-    <p>
-        <a href="/donate?token={{ token }}">Thanks a lot!</a>
-    </p>
-</details>
-<details>
-    <summary>...I want to support open source software development</summary>
-    <p>
-        <a href="/donate?token={{ token }}">Thank you for wanting to support my open source projects! This is very kind of you.</a>
-    </p>
-</details>
-<details>
-    <summary>...I want to make the world a better place</summary>
-    <p>
-        Sorry, I can't do that. <a href="https://secure.givewell.org/">Donate to GiveWell instead</a>,
-        and maybe a child in Africa won't die of Malaria thanks to you. Thanks, nonetheless!
-    </p>
-</details>
-
+<h2>Crypto Currencies</h2>
+<h3>Monero (XMR)</h3>
+<p><pre>83bE7e629jFgK17LXM3bjvZUu16WZ5XuG7eq5aKRJDm94vt2pais1knTkXdPjiaAWrLiEPyp21ZQ9Cq7BmgPcuQi3QYKf5o</pre></p>
+<img src="/images/xmr.png" alt="Monero Donation QR Code" width="400px">
 
 {% include "components/end.html" %}

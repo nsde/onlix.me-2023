@@ -95,7 +95,7 @@ Thanks to PhotoMIX-Company on Pixabay for the [picture](https://pixabay.com/phot
         <tr>
             <td><i>ToS;DRos</i> Terms of Service Grade</td>
             <td><a href="https://tosdr.org/en/service/536" style="color: red;">E</td>
-            <td><a href="https://tosdr.org/en/service/198" style="color: red;">E</td>
+            <td><a href="https://tosdr.org/en/service/198" style="color: yellow;">C</td>
         </tr>
         <tr>
             <td><strong>Score</strong></td>

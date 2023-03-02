@@ -1,61 +1,16 @@
-<!--=| Start of top.html |=-->
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <title>{{ title }} · ONLIX</title>
 
-    <link href="/styles/helpers.css" rel="stylesheet">
-    <link href="/styles/themes.css" rel="stylesheet">
-    <link href="/styles/blog.css" rel="stylesheet">
-    <link href="/styles/cord.css" rel="stylesheet">
-    <link href="/styles/lila.css" rel="stylesheet">
-    
+    {% for css in 'lila-v2 _helpers blog nav utils formatting ui'.split() %}
+    <link href="/styles/{{ css }}.css" rel="stylesheet">
+    {% endfor %}    
+
     <link href="/cdn/bi.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="msapplication-TileColor" content="#41234a">
-    <meta name="msapplication-TileImage" content="https://www.onlix.me/favicons/150.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#41234a">
-    <meta name="apple-mobile-web-app-title" content="{{ title }} · ONLIX">
-    <meta name="application-name" content="{{ title }} · ONLIX">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#41234a">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="ONLIX">
-    <meta name="description" content="{{ description }}">
-
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="https://www.onlix.me/images/{{ image or 'wave.jpg' }}">
-    <meta property="og:locale" content="en">
-    <meta property="og:site_name" content="onlix.me">
-    <meta property="og:title" content="{{ title }} · ONLIX">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
-
-    <meta property="article:author" content="ONLIX">
-    <meta property="article:section" content="website">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="https://www.onlix.me">
-    <meta name="twitter:url" content="/">
-    <meta name="twitter:site" content="/">
-    <meta name="twitter:creator" content="by ONLIX">
-    <meta name="twitter:title" content="{{ title }} · ONLIX">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image:src" content="https://www.onlix.me/images/{{ image or 'wave.jpg' }}">
-
-    <link rel="canonical" href="/">
-    <link rel="apple-touch-icon" href="/favicons/favicon.ico" sizes="180x180">
-    <link rel="icon" href="/favicons/favicon.ico" sizes="32x32">
-    <link rel="icon" href="/favicons/favicon.ico" sizes="16x16">
-    <link rel="image_src" href="/favicons/favicon.ico">
+    {% include 'components/seo.html' %}
 </head>
 {% if not lite %}
     {% if dark_image %}
@@ -63,35 +18,26 @@
     {% else %}
     <body class="">
         {% endif %}
-            <div id="⤒"></div>
-            <header class="with-nav {{ cover_classes or 'transparent-35' }}">
+            <header class="with-nav">
                 <!-- <img src="https://www.onlix.me/images/{{ image or '' }}" alt="Header image"> -->
                 <nav class="floating" id="navbar" style="transition: top 0.3s">
-                    <!-- <img class="logo" src="/favicons/96.png" onclick="window.location.href='/'"> -->
-                    <span>&nbsp;ONLIX</span>
+                    <span>&nbsp;onlix.me</span>
 
-                    <a href="/" class="{{ 'current' if title == 'Home' }}"><i class="bi bi-house"></i> Home</a>                    
-                    <a href="/blog" class="{{ 'current' if title == 'Blog Overview' or '· Blog' in title }}"><i class="bi bi-newspaper"></i> Blog</a>
-                    <a href="/contact" class="{{ 'current' if title == 'Contact' }}"><i class="bi bi-envelope"></i> Contact</a>
-                    <!-- <a href="https://stray.onlix.me" target="_blank"><i class="bi bi-controller"></i> Stray <i class="bi bi-box-arrow-up-right small" style="opacity: 0.5;"></i></a> -->
-
-                    <!-- <div class="dropdown"> -->
-                        <a class="dropdown-button" href="https://github.com/nsde?tab=repositories" target="_blank"><i class="bi bi-journal-code"></i> Projects <i class="bi bi-box-arrow-up-right small" style="opacity: 0.5;"></i></a>
-                        <!-- <div class="dropdown-content"> -->
-                            <!-- <a href="https://github.com/nsde/lixvpn"><i class="bi bi-share"></i> LivVPN</a> -->
-                            <!-- <a href="https://github.com/nsde/lilacss"><i class="bi bi-braces-asterisk"></i> LilaCSS</a> --> 
-                            <!-- <a href="https://github.com/nsde/strobe"><i class="bi bi-lightning"></i> Strobe</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
+                    <a href="/" class="{{ 'current' if title == 'Home' }}">
+                        <i class="bi bi-house"></i> Home</a>                    
+                    <a href="/blog" class="{{ 'current' if title == 'Blog Overview' or '· Blog' in title }}">
+                        <i class="bi bi-newspaper"></i> Blog</a>
+                    <a href="/contact" class="{{ 'current' if title == 'Contact' }}"><i class="bi bi-envelope">
+                    </i> Contact</a>
+                    <a class="dropdown-button" href="https://github.com/nsde?tab=repositories" target="_blank">
+                        <i class="bi bi-journal-code"></i> Projects <i class="bi bi-box-arrow-up-right small" style="opacity: 0.5;"></i></a>
                 </nav>
 
             {% if not no_header %}
             <h1>{{ title }}</h1>
             <p>{{ description }}</p>
-            <!-- <button onclick="window.location.href='#main'"><i style="font-size: 1rem;" class="bi bi-arrow-down"></i></button> -->
             {% endif %}
         </header>
 
         <main id="main">
 {% endif %}
-<!--=| End of top.html |=-->

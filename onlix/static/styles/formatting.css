@@ -1,0 +1,129 @@
+:root {
+  --edge: 5px;
+  --theme: "Light";
+  --sans-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --mono-font: "Droid Sans Mono", "monospace", monospace;
+  --bg: #faf8fb;
+  --accent-bg: #c6a0d723;
+  --darker-bg: #645a82;
+  --fluid: #b2a0ed45;
+  --light-bg: #202020;
+  --text: #111111;
+  --text-light: #3e3a4f;
+  --border: #211e582f;
+  --accent: #7b41f9;
+  --glass: #afaad0ee;
+  --soft: #6d68f622;
+  --active: #9c7aec;
+  --code: #444;
+  --marked: #9f39e32d;
+  --disabled: #efefef;
+  --gradient-accent: linear-gradient(90deg, rgb(235, 72, 227) 0%, rgb(235, 72, 227) 50%, rgba(235, 27, 145, 0.753) 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme: "Dark";
+    --bg: #12101d;
+    --accent-bg: #c6b4ff13;
+    --darker-bg: #00000018;
+    --fluid: #7c5da543;
+    --text: #dcdcdc;
+    --text-light: #ffffffd8;
+    --border: hsla(0, 0%, 100%, 0.099);
+    --accent: #de79fa;
+    --glass: #704b98d6;
+    --soft: #f668d00f;
+    --active: #7b2c66;
+    --code: #ccc;
+    --marked: #ff8cf9a1;
+    --disabled: #111;
+  }
+}
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin: 0rem 0 0rem 0rem;
+  padding: 0.4rem 0.8rem;
+  border-left: 0.35rem solid var(--accent);
+  color: var(--text-light);
+  font-style: italic;
+}
+
+cite {
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+blockquote p, blockquote cite {
+  margin-block: 0.5rem;
+}
+
+code, pre *, kbd, samp {
+  font-family: var(--mono-font);
+  color: var(--text);
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+
+kbd {
+  color: var(--code);
+  border: 1px solid var(--accent);
+  border-radius: var(--edge);
+  padding: 0.1rem 0.4rem;
+}
+
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+  color: var(--code);
+  background: var(--accent-bg);
+  border-radius: 10px;
+  color: var(--text);
+}
+pre code {
+  color: var(--code);
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+p code {
+  padding: 0.3rem;
+  border-radius: var(--edge);
+  background-color: var(--accent-bg) !important;
+}
+
+hr {
+  color: var(--text);
+  border-right: 20rem solid;
+  margin: 1rem auto;
+}
+
+mark {
+  padding: 2px 5px;
+  border-radius: var(--edge);
+  color: var(--text);
+  background: var(--marked);
+}
+
+.btnlike {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  outline: 3px solid transparent;
+}
+.btnlike:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=formatting.css.map */

@@ -1,0 +1,76 @@
+@import '_vars'
+
+figure
+    margin: 0
+    text-align: center
+
+figcaption
+    font-size: 0.9rem
+    color: var(--text-light)
+    margin-bottom: 1rem
+
+blockquote
+    margin: 0rem 0 0rem 0rem
+    padding: 0.4rem 0.8rem
+    border-left: 0.35rem solid var(--accent)
+    color: var(--text-light)
+    font-style: italic
+
+cite
+    font-size: 0.9rem
+    font-style: normal
+
+blockquote
+    p, cite
+        margin-block: 0.5rem
+
+code, pre *, kbd, samp
+    font-family: var(--mono-font)
+    color: var(--text)
+    line-height: 19px
+    letter-spacing: 0px
+
+kbd
+    color: var(--code)
+    border: 1px solid var(--accent)
+    border-radius: var(--edge)
+    padding: 0.1rem 0.4rem
+
+pre
+    padding: 1rem 1.4rem
+    max-width: 100%
+    overflow: auto
+    color: var(--code)
+    background: var(--accent-bg)
+    border-radius: 10px
+    color: var(--text)
+
+    code
+        color: var(--code)
+        background: none
+        margin: 0
+        padding: 0
+
+p code
+    padding: 0.3rem
+    border-radius: var(--edge)
+    background-color: var(--accent-bg) !important
+
+hr
+    color: var(--text)
+    border-right: 20rem solid
+    margin: 1rem auto
+
+mark
+    padding: 2px 5px
+    border-radius: var(--edge)
+    color: var(--text)
+    background: var(--marked)
+
+.btnlike
+    cursor: pointer
+    user-select: none
+    outline: 3px solid transparent
+
+    &:hover
+        opacity: 0.8

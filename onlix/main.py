@@ -48,24 +48,7 @@ def legal_raw_download():
 @main_bp.route('/donate')
 def donate():
     """Donation page"""
-
-    donations = tools.yml('data/donations') or {}
-    
-    token = flask.request.args.get('token')
-
-    if not token:
-        token = tools.generate_token()
-        donations[token] = time.time()
-        tools.yml('data/donations', edit_to=donations)
-
-        return tools.show('donate.html', token=token)
-    else:
-        diff = 24 * 60 * 60 # 86400 seconds 
-
-        if time.time() - (donations.get(token) or -1)  < diff:
-            return tools.show('donation.html')
-        else:
-            return tools.show('donate.html', token=token, error=True)
+    return tools.show('donate.html')
 
 @main_bp.route('/randomizer')
 def randomizer():
